@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+
+			* {
+			  box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				border-style: solid;
+				font-family: Courier New, Helvetica, sans-serif;
+			}
+
+			header {
+			  background-color: #666;
+			  padding: 1px;
+			  text-align: center;
+			  font-size: 20px;
+			  color: white;
+			  border-style: double;	
+			  border-color: orange;
+			}
+
+			.sticky {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+			}
+			
+			.sticky + .content {
+			  padding-top: 102px;
+			}
+			
+			nav {
+			  float: left;
+			  width: 10%;
+			  height: 500px; 
+			  background: #FF69B4;
+			  padding: 10px;
+			  font-size: 20px;
+			}
+
+			nav ul {
+			  list-style-type: none;
+			  padding: 20px;
+			}
+
+			article {
+			  float: left;
+			  padding: 20px;
+			  width: 90%;
+			  background-repeat: no-repeat;
+			  height: 500px; 
+			}
+
+			
+			section:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			.column {
+			  float: left;
+			  width: 70%;
+			  padding: 10px;
+			  height: 500px; 
+			}
+
+			.column2 {
+			  float: right;
+			  width: 30%;
+			  padding: 10px;
+			  height: 500px; 
+			}
+			
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  width: 100%;
+			  height: 100%;
+			  background-color: #F9E79F ;
+			}
+
+			li a {
+			  display: block;
+			  color: #000;
+			  padding: 8px 8px;
+			  text-decoration: none;
+			  
+			}
+
+			li a.active {
+			  background-color: #4CAF50;
+			  color: white;
+			}
+
+			li a:hover:not(.active) {
+			  background-color: #555;
+			  color: white;
+			}
+
+			footer {
+			  background-color: #8E44AD;
+			  padding: 1px;
+			  text-align: center;
+			  color: white;
+			  border-style: double;	
+			  border-color: orange;
+			  
+			}
+
+
+			@media (max-width: 600px) {
+			  nav, article {
+				width: 100%;
+				height: auto;
+			  			
+			  }
+			}
+		</style>
+	</head>
+
+	<body>
+
+
+		<header id="myHeader">
+		  <h2 style="top-margin:1px">Online Library Management System</h2>
+		</header>
+
+		<section class="content">
+		  <nav style="padding:0; background-color: #FF1493;">
+			<ul>
+			  <li><a class="active" href="home.html" style="font-size: 20px;">Home</a></li>
+			  <li><a href="https://www.amazon.in/Books/b?ie=UTF8&node=976389031" style="font-size: 20px;">Buy-Books</a></li>
+			  <li><a href="contact.html" style="font-size: 20px;">Contact</a></li>
+			  <li><a href="index.html" style="font-size: 20px; font-weight: bold;">LogIn</a></li>
+			</ul>
+
+		  </nav>
+		  
+		  <article style="padding:0; background-image: url('bg.jpg');" >
+			<div class="row">
+			<div class="column" >
+			
+                            <h1 style="font-size: 36px;">WELCOME TO ONLINE LIBRARY</h1>				
+                            <p>Online Library Management System is an Automated Library System that handles the various functions of the library. 
+                            It provides a complete solution to the library management software.</p>
+
+                            <p>Library plays an important role in all schools and colleges, no educational institution can exist without Library Administration Software. It is an important part of every school and college and it helps the librarian to keep records of available books as well as issued books. Library Management System software helps in different ways by providing students the facility to learn, gather resources, promote group learning and improve knowledge and skills.</p>
+
+                            <h3 style="font-size: 15px;">Features of Online Library Management System</h3>
+                            <ol>
+                                    <li>Integration of all records of students</li>
+                                    <li>Manage the records systematically</li>
+                                    <li>It can track any information online</li>
+                                    <li>Manage all information online</li>
+                                    <li>Easy to maintain records</li>
+                                    <li>It leads to fast book entry</li>						
+                            </ol>
+			</div>
+			
+			  <div class="column2" style="background-image: url('bg.jpg');">
+				<img style="width:100%; height:100%;" src="online-library-management.jpg" alt="Barcode System">
+			</div>
+			</div>
+
+		  </article>
+		</section>
+
+		<footer class="content">
+		  <h3>Contact for any query.</h3>
+		  <p>+91 6353799443</p>
+		  <p>kkrebels@gmail.com</p>
+		  <p>Gujarat, India</p>
+		</footer>
+	
+		<script>
+                    window.onscroll = function() {myFunction()};
+
+                    var header = document.getElementById("myHeader");
+                    var sticky = header.offsetTop;
+
+                    function myFunction() {
+                      if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                      } else {
+                        header.classList.remove("sticky");
+                      }
+                    }
+                </script>
+	</body>
+	
+</html>

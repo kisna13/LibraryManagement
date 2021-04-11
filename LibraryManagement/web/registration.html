@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              
+              background-image: url("download.jpg");
+              background-size: cover;
+              position: relative;
+              background-repeat: no-repeat;
+
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+
+            input[type=text], input[type=password] {
+              width: 100%;
+              padding: 15px;
+              margin: 5px 0 22px 0;
+              display: inline-block;
+              border: none;
+              background: #f1f1f1;
+            }
+
+            input[type=text]:focus, input[type=password]:focus {
+              background-color: #ddd;
+              outline: none;
+              width: 50%;
+            }
+
+            hr {
+              border: 1px solid #f1f1f1;
+              margin-bottom: 25px;
+            }
+
+            .registerbtn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px 20px;
+              margin: 8px 0;
+              border: none;
+              cursor: pointer;
+              width: 30%;
+              opacity: 0.9;
+              margin-left: 35%;
+              margin-right: 20%;
+            }
+
+            .registerbtn:hover {
+              opacity: 1;
+            }
+
+            a {
+              color: dodgerblue;
+            }
+
+            .signin {
+              text-align: center;
+            }
+        </style>
+    </head>
+    
+<body>
+    <form action="reg" method='post'>
+        <h1 style="text-align:center;">Register</h1>
+        <p style="text-align:center;">Please fill in this form to create an account.</p>
+        <hr>
+            <table style="text-align:center; margin-left: 35%; margin-right: 20%" >
+            <tr>
+                    <td>
+                    <label for="name"><b>User Name</b></label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter Name" name="name" id="name" required>
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                    <label for="psw"><b>Password</b></label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                </td>
+            </tr>
+
+        </table>
+
+
+        <hr>
+        <button type="submit" class="registerbtn">Register</button>
+
+        <h2 class="signin">Already have an account? <a href="index.html">Sign in</a>.</h2>
+    </form>
+</body>
+</html>
